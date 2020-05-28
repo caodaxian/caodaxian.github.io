@@ -584,6 +584,8 @@ function setSidebarMarginTop (headerOffset) {
           
 
   
+    <div id="gitalk-container"></div>
+  
 
 
 
@@ -937,6 +939,24 @@ function setSidebarMarginTop (headerOffset) {
 
 
 
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd1c8ebc86ba727ae02f2',
+      clientSecret: 'e39cb695fad0c43ba1506ad6c67c3663f91bdf42',
+      repo: 'caodaxiangitalk',
+      owner: 'giraffey375',
+      admin: ['giraffey375'],
+      id: location.pathname,
+      distractionFreeMode: 'false'
+    })
+    gitalk.render('gitalk-container')
+  </script>
 
 
 
