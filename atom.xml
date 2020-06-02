@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://owlhy.com/"/>
-  <updated>2020-06-01T09:25:31.500Z</updated>
+  <updated>2020-05-15T03:46:23.845Z</updated>
   <id>https://owlhy.com/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="https://owlhy.com/test.html"/>
-    <id>https://owlhy.com/test.html</id>
-    <published>2020-06-01T05:52:33.289Z</published>
-    <updated>2020-06-01T09:25:31.500Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;http://pic.owlhy.com/blog/desktop.jpeg&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>【SpringBoot中logback处理日志】</title>
@@ -178,6 +155,29 @@
   </entry>
   
   <entry>
+    <title>【いつだって 信じて 可能性 は無限大】</title>
+    <link href="https://owlhy.com/planB.html"/>
+    <id>https://owlhy.com/planB.html</id>
+    <published>2018-11-28T16:00:00.000Z</published>
+    <updated>2020-06-02T14:51:06.132Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://pic.owlhy.com/blog/desktop.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="cdx" scheme="https://owlhy.com/categories/cdx/"/>
+    
+    
+      <category term="vlog" scheme="https://owlhy.com/tags/vlog/"/>
+    
+      <category term="cdx" scheme="https://owlhy.com/tags/cdx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【Hadoop学习笔记 -- 修改本地临时文件存储目录】</title>
     <link href="https://owlhy.com/hadoop-04.html"/>
     <id>https://owlhy.com/hadoop-04.html</id>
@@ -197,6 +197,152 @@
       <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
     
       <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Solr入门--搭建Solr过程中遇到的问题汇总】</title>
+    <link href="https://owlhy.com/solr-06.html"/>
+    <id>https://owlhy.com/solr-06.html</id>
+    <published>2018-11-21T16:00:00.000Z</published>
+    <updated>2020-06-02T15:01:10.578Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;1-使用腾讯等云主机，有安全组的，如果不放行出站规则，-dataimport-properties中的请求地址不可以使用公网地址&quot;&gt;&lt;a href=&quot;#1-使用腾讯等云主机，有安全组的，如果不放行出站规则，-dataimport-properties中的请求地址不可以使用公网地址&quot; class=&quot;headerlink&quot; title=&quot;1.使用腾讯等云主机，有安全组的，如果不放行出站规则，.dataimport.properties中的请求地址不可以使用公网地址&quot;&gt;&lt;/a&gt;1.使用腾讯等云主机，有安全组的，如果不放行出站规则，.dataimport.properties中的请求地址不可以使用公网地址&lt;/h5&gt;
+    
+    </summary>
+    
+    
+      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Solr入门--复制域的详细配置】</title>
+    <link href="https://owlhy.com/solr-05.html"/>
+    <id>https://owlhy.com/solr-05.html</id>
+    <published>2018-11-20T16:00:00.000Z</published>
+    <updated>2020-06-02T15:01:05.661Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;solr在没设置默认字段的情况下，搜索格式为“q=name:php学习”的形式，将name设置为默认搜索字段后就可以用“q=php学习”的形式进行搜索了。&lt;/p&gt;
+&lt;h5 id=&quot;solr设置默认搜索字段的方法为：&quot;&gt;&lt;a href=&quot;#solr设置默认搜索字段的方法为：&quot; class=&quot;headerlink&quot; title=&quot;solr设置默认搜索字段的方法为：&quot;&gt;&lt;/a&gt;solr设置默认搜索字段的方法为：&lt;/h5&gt;&lt;h6 id=&quot;1-在schema-xml配置文件中找到text，一般默认情况下，这行配置是被注释的，取消注释，将text改成你要设置字段名。&quot;&gt;&lt;a href=&quot;#1-在schema-xml配置文件中找到text，一般默认情况下，这行配置是被注释的，取消注释，将text改成你要设置字段名。&quot; class=&quot;headerlink&quot; title=&quot;1. 在schema.xml配置文件中找到text，一般默认情况下，这行配置是被注释的，取消注释，将text改成你要设置字段名。&quot;&gt;&lt;/a&gt;1. 在schema.xml配置文件中找到&lt;defaultSearchField&gt;text&lt;/defaultSearchField&gt;，一般默认情况下，这行配置是被注释的，取消注释，将text改成你要设置字段名。&lt;/h6&gt;
+    
+    </summary>
+    
+    
+      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Solr入门--导入数据（基于内置Jetty）】</title>
+    <link href="https://owlhy.com/solr-03.html"/>
+    <id>https://owlhy.com/solr-03.html</id>
+    <published>2018-11-19T16:00:00.000Z</published>
+    <updated>2020-06-02T15:00:53.560Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;1-准备工作&quot;&gt;&lt;a href=&quot;#1-准备工作&quot; class=&quot;headerlink&quot; title=&quot;1.准备工作&quot;&gt;&lt;/a&gt;1.准备工作&lt;/h4&gt;&lt;h5 id=&quot;搭建配置好solr，新建一个core&quot;&gt;&lt;a href=&quot;#搭建配置好solr，新建一个core&quot; class=&quot;headerlink&quot; title=&quot;搭建配置好solr，新建一个core&quot;&gt;&lt;/a&gt;搭建配置好solr，新建一个core&lt;/h5&gt;&lt;h4 id=&quot;2-修改solrconfig-xml&quot;&gt;&lt;a href=&quot;#2-修改solrconfig-xml&quot; class=&quot;headerlink&quot; title=&quot;2.修改solrconfig.xml&quot;&gt;&lt;/a&gt;2.修改solrconfig.xml&lt;/h4&gt;&lt;h5 id=&quot;1-在的上面添加如下代码&quot;&gt;&lt;a href=&quot;#1-在的上面添加如下代码&quot; class=&quot;headerlink&quot; title=&quot;1.在的上面添加如下代码&quot;&gt;&lt;/a&gt;1.在&lt;requestHandler name=&quot;/select&quot; class=&quot;solr.SearchHandler&quot;&gt;的上面添加如下代码&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;requestHandler name&amp;#x3D;&amp;quot;&amp;#x2F;dataimport&amp;quot; class&amp;#x3D;&amp;quot;org.apache.solr.handler.dataimport.DataImportHandler&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　     &amp;lt;lst name&amp;#x3D;&amp;quot;defaults&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　        &amp;lt;str name&amp;#x3D;&amp;quot;config&amp;quot;&amp;gt;data-config.xml&amp;lt;&amp;#x2F;str&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　     &amp;lt;&amp;#x2F;lst&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　&amp;lt;&amp;#x2F;requestHandler&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Solr入门--定时导入数据】</title>
+    <link href="https://owlhy.com/solr-04.html"/>
+    <id>https://owlhy.com/solr-04.html</id>
+    <published>2018-11-19T16:00:00.000Z</published>
+    <updated>2020-06-02T15:01:00.003Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot;&gt;&lt;a href=&quot;#1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot; class=&quot;headerlink&quot; title=&quot;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&quot;&gt;&lt;/a&gt;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&lt;/h5&gt;&lt;h5 id=&quot;2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot;&gt;&lt;a href=&quot;#2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot; class=&quot;headerlink&quot; title=&quot;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&quot;&gt;&lt;/a&gt;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;listener-class&amp;gt;org.apache.solr.handler.dataimport.scheduler.ApplicationListener&amp;lt;&amp;#x2F;listener-class&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;#x2F;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Solr入门--基于内置Jetty搭建solr服务】</title>
+    <link href="https://owlhy.com/solr-02.html"/>
+    <id>https://owlhy.com/solr-02.html</id>
+    <published>2018-11-18T16:00:00.000Z</published>
+    <updated>2020-06-02T15:00:48.053Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-准备工作&quot;&gt;&lt;a href=&quot;#1-准备工作&quot; class=&quot;headerlink&quot; title=&quot;1.准备工作&quot;&gt;&lt;/a&gt;1.准备工作&lt;/h3&gt;&lt;hr&gt;
+&lt;h5 id=&quot;1-下载solr-5-5-5-tgz&quot;&gt;&lt;a href=&quot;#1-下载solr-5-5-5-tgz&quot; class=&quot;headerlink&quot; title=&quot;1.下载solr-5.5.5.tgz&quot;&gt;&lt;/a&gt;1.下载solr-5.5.5.tgz&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;下载地址:http:&amp;#x2F;&amp;#x2F;archive.apache.org&amp;#x2F;dist&amp;#x2F;lucene&amp;#x2F;solr&amp;#x2F;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;2-创建一个目录solr-将solr解压过去&quot;&gt;&lt;a href=&quot;#2-创建一个目录solr-将solr解压过去&quot; class=&quot;headerlink&quot; title=&quot;2.创建一个目录solr,将solr解压过去&quot;&gt;&lt;/a&gt;2.创建一个目录solr,将solr解压过去&lt;/h5&gt;&lt;h5 id=&quot;3-开放防火墙指定端口&quot;&gt;&lt;a href=&quot;#3-开放防火墙指定端口&quot; class=&quot;headerlink&quot; title=&quot;3.开放防火墙指定端口&quot;&gt;&lt;/a&gt;3.开放防火墙指定端口&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;参考CentOS6和CentOS7区别之防火墙&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Solr入门--基于Tomcat搭建solr服务】</title>
+    <link href="https://owlhy.com/solr-01.html"/>
+    <id>https://owlhy.com/solr-01.html</id>
+    <published>2018-11-17T16:00:00.000Z</published>
+    <updated>2020-06-02T15:00:43.191Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-准备环境&quot;&gt;&lt;a href=&quot;#1-准备环境&quot; class=&quot;headerlink&quot; title=&quot;1.准备环境&quot;&gt;&lt;/a&gt;1.准备环境&lt;/h3&gt;&lt;h4 id=&quot;1-运行环境&quot;&gt;&lt;a href=&quot;#1-运行环境&quot; class=&quot;headerlink&quot; title=&quot;1.运行环境&quot;&gt;&lt;/a&gt;1.运行环境&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;主机：Linux&lt;/li&gt;
+&lt;li&gt;容器：tomcat&lt;h4 id=&quot;2-安装solr服务&quot;&gt;&lt;a href=&quot;#2-安装solr服务&quot; class=&quot;headerlink&quot; title=&quot;2.安装solr服务&quot;&gt;&lt;/a&gt;2.安装solr服务&lt;/h4&gt;&lt;h5 id=&quot;1-在主机下创建一个文件夹solr；&quot;&gt;&lt;a href=&quot;#1-在主机下创建一个文件夹solr；&quot; class=&quot;headerlink&quot; title=&quot;1.在主机下创建一个文件夹solr；&quot;&gt;&lt;/a&gt;1.在主机下创建一个文件夹solr；&lt;/h5&gt;&lt;h5 id=&quot;2-在solr文件夹中安装tomcat；&quot;&gt;&lt;a href=&quot;#2-在solr文件夹中安装tomcat；&quot; class=&quot;headerlink&quot; title=&quot;2.在solr文件夹中安装tomcat；&quot;&gt;&lt;/a&gt;2.在solr文件夹中安装tomcat；&lt;/h5&gt;&lt;h5 id=&quot;3-将solr-4-10-3-dist-solr-4-10-3-war复制到xxx-splr-tomcat-webapps-下，并改名为solr-war；&quot;&gt;&lt;a href=&quot;#3-将solr-4-10-3-dist-solr-4-10-3-war复制到xxx-splr-tomcat-webapps-下，并改名为solr-war；&quot; class=&quot;headerlink&quot; title=&quot;3.将solr-4.10.3/dist/solr-4.10.3.war复制到xxx/splr/tomcat/webapps/下，并改名为solr.war；&quot;&gt;&lt;/a&gt;3.将solr-4.10.3/dist/solr-4.10.3.war复制到xxx/splr/tomcat/webapps/下，并改名为solr.war；&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cp solr-4.10.3.war xxx&amp;#x2F;splr&amp;#x2F;tomcat&amp;#x2F;webapps&amp;#x2F;solr.war&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
     
   </entry>
   
