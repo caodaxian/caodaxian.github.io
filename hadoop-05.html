@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="springboot,log," />
+  <meta name="keywords" content="linux,hadoop," />
 
 
 
@@ -98,18 +98,25 @@
 
 
 
-<meta name="description" content="实现功能 每60M分割日志 按天分割日志 日志推送到LogStach">
+<meta name="description" content="前言: 之前的笔记中记录了Hadoop伪分布式的搭建，但是在实际中，伪分布式是远远不能够满足需求的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【SpringBoot中logback处理日志】">
-<meta property="og:url" content="https://owlhy.com/springboot-logback.html">
+<meta property="og:title" content="【Hadoop学习笔记 -- 完全分布式搭建】">
+<meta property="og:url" content="https://owlhy.com/hadoop-05.html">
 <meta property="og:site_name" content="曹大仙儿">
-<meta property="og:description" content="实现功能 每60M分割日志 按天分割日志 日志推送到LogStach">
-<meta property="article:published_time" content="2020-04-07T14:21:11.000Z">
-<meta property="article:modified_time" content="2020-05-15T03:46:23.845Z">
+<meta property="og:description" content="前言: 之前的笔记中记录了Hadoop伪分布式的搭建，但是在实际中，伪分布式是远远不能够满足需求的。">
+<meta property="og:image" content="https://owlhy.com/pic.owlhy.com/blog/20200602223731.png">
+<meta property="og:image" content="https://owlhy.com/pic.owlhy.com/blog/20200602223756.png">
+<meta property="og:image" content="https://owlhy.com/pic.owlhy.com/blog/20200602223855.png">
+<meta property="og:image" content="https://owlhy.com/pic.owlhy.com/blog/20200602223915.png">
+<meta property="og:image" content="https://owlhy.com/pic.owlhy.com/blog/20200602223948.png">
+<meta property="og:image" content="https://owlhy.com/pic.owlhy.com/blog/20200602224005.png">
+<meta property="article:published_time" content="2018-11-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-06-02T14:40:26.541Z">
 <meta property="article:author" content="CAO.DA.XIAN">
-<meta property="article:tag" content="springboot">
-<meta property="article:tag" content="log">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="hadoop">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://owlhy.com/pic.owlhy.com/blog/20200602223731.png">
 
 
 
@@ -139,7 +146,7 @@
 
 
 
-  <link rel="canonical" href="https://owlhy.com/springboot-logback.html"/>
+  <link rel="canonical" href="https://owlhy.com/hadoop-05.html"/>
 
 
 
@@ -155,7 +162,7 @@
   </script>
 
 
-  <title>【SpringBoot中logback处理日志】 | 曹大仙儿</title>
+  <title>【Hadoop学习笔记 -- 完全分布式搭建】 | 曹大仙儿</title>
   
 
 
@@ -355,7 +362,7 @@ function setSidebarMarginTop (headerOffset) {
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://owlhy.com/springboot-logback.html">
+    <link itemprop="mainEntityOfPage" href="https://owlhy.com/hadoop-05.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CAO.DA.XIAN">
@@ -372,7 +379,7 @@ function setSidebarMarginTop (headerOffset) {
 
         
         
-          <h1 class="post-title" itemprop="name headline">【SpringBoot中logback处理日志】</h1>
+          <h1 class="post-title" itemprop="name headline">【Hadoop学习笔记 -- 完全分布式搭建】</h1>
         
 
         <div class="post-meta">
@@ -384,8 +391,8 @@ function setSidebarMarginTop (headerOffset) {
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T22:21:11+08:00">
-                2020-04-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-29T00:00:00+08:00">
+                2018-11-29
               </time>
             
 
@@ -407,19 +414,8 @@ function setSidebarMarginTop (headerOffset) {
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/springboot/" itemprop="url" rel="index">
-                    <span itemprop="name">springboot</span>
+                  <a href="/categories/hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">hadoop</span>
                   </a>
                 </span>
 
@@ -454,7 +450,7 @@ function setSidebarMarginTop (headerOffset) {
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  780 字
+                  475 字
                 </span>
               
 
@@ -470,7 +466,7 @@ function setSidebarMarginTop (headerOffset) {
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  1 分钟
                 </span>
               
             </div>
@@ -491,16 +487,27 @@ function setSidebarMarginTop (headerOffset) {
       
 
       
-        <h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul>
-<li>每60M分割日志</li>
-<li>按天分割日志</li>
-<li>日志推送到LogStach</li>
-</ul>
-<hr>
+        <p><strong>前言</strong>: 之前的笔记中记录了Hadoop伪分布式的搭建，但是在实际中，伪分布式是远远不能够满足需求的。</p>
 <a id="more"></a>
 
-<h2 id="logback-boot-xml"><a href="#logback-boot-xml" class="headerlink" title="logback-boot.xml"></a>logback-boot.xml</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">conversionRule</span> <span class="attr">conversionWord</span>=<span class="string">"clr"</span> <span class="attr">converterClass</span>=<span class="string">"org.springframework.boot.logging.logback.ColorConverter"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"PATTERN_COLOR"</span> <span class="attr">value</span>=<span class="string">"%-12(%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125;) |%clr(-%-5level) %clr([%X&#123;localIP&#125;]) %clr([%thread]) %yellow(at %class.%method) \\(%file:%line\\) %green([%X&#123;requestId&#125;]) %clr(-|) %highlight(%msg%n)"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--去除--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"PATTERN"</span> <span class="attr">value</span>=<span class="string">"%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; |-%-5level [%X&#123;localIP&#125;] [%thread] at %class.%method \\(%file:%line\\) [%X&#123;requestId&#125;] -| %msg%n"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"LOG_HOME"</span> <span class="attr">value</span>=<span class="string">"./logs"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 控制台 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"CONSOLE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;PATTERN_COLOR&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- SYS_INFO --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"SYS_INFO"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.RollingFileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">File</span>&gt;</span>$&#123;LOG_HOME&#125;/info.log<span class="tag">&lt;/<span class="name">File</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--过滤器,只打INFO级别的日志--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.filter.LevelFilter"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">level</span>&gt;</span>INFO<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMatch</span>&gt;</span>ACCEPT<span class="tag">&lt;/<span class="name">onMatch</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMismatch</span>&gt;</span>DENY<span class="tag">&lt;/<span class="name">onMismatch</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">FileNamePattern</span>&gt;</span>$&#123;LOG_HOME&#125;/info/%d&#123;yyyy-MM,aux&#125;/info-%d&#123;yyyy-MM-dd&#125;.%i.log<span class="tag">&lt;/<span class="name">FileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxHistory</span>&gt;</span>90<span class="tag">&lt;/<span class="name">MaxHistory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxFileSize</span>&gt;</span>60MB<span class="tag">&lt;/<span class="name">MaxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">totalSizeCap</span>&gt;</span>5GB<span class="tag">&lt;/<span class="name">totalSizeCap</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.encoder.PatternLayoutEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;PATTERN&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- SYS_ERROR --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"SYS_ERROR"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.RollingFileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">File</span>&gt;</span>$&#123;LOG_HOME&#125;/error.log<span class="tag">&lt;/<span class="name">File</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 按临界值过滤日志：低于ERROR以下级别被抛弃 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.filter.ThresholdFilter"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">level</span>&gt;</span>ERROR<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">FileNamePattern</span>&gt;</span>$&#123;LOG_HOME&#125;/error/%d&#123;yyyy-MM,aux&#125;/error-%d&#123;yyyy-MM-dd&#125;.%i.log<span class="tag">&lt;/<span class="name">FileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxHistory</span>&gt;</span>90<span class="tag">&lt;/<span class="name">MaxHistory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxFileSize</span>&gt;</span>60MB<span class="tag">&lt;/<span class="name">MaxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">totalSizeCap</span>&gt;</span>5GB<span class="tag">&lt;/<span class="name">totalSizeCap</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.encoder.PatternLayoutEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;PATTERN&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- SYS_ALL --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"SYS_ALL"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.RollingFileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">File</span>&gt;</span>$&#123;LOG_HOME&#125;/../owlhy.log<span class="tag">&lt;/<span class="name">File</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">FileNamePattern</span>&gt;</span>$&#123;LOG_HOME&#125;/owlhy/%d&#123;yyyy-MM,aux&#125;/owlhy-%d&#123;yyyy-MM-dd&#125;.%i.log<span class="tag">&lt;/<span class="name">FileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxHistory</span>&gt;</span>90<span class="tag">&lt;/<span class="name">MaxHistory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxFileSize</span>&gt;</span>60MB<span class="tag">&lt;/<span class="name">MaxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">totalSizeCap</span>&gt;</span>5GB<span class="tag">&lt;/<span class="name">totalSizeCap</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.encoder.PatternLayoutEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;PATTERN_COLOR&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- LOGSTASH --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"LOGSTASH"</span> <span class="attr">class</span>=<span class="string">"net.logstash.logback.appender.LogstashTcpSocketAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">destination</span>&gt;</span>10.1.192.188:9100<span class="tag">&lt;/<span class="name">destination</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">includeCallerData</span>&gt;</span>true<span class="tag">&lt;/<span class="name">includeCallerData</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"net.logstash.logback.encoder.LogstashEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">includeCallerData</span>&gt;</span>true<span class="tag">&lt;/<span class="name">includeCallerData</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 日志级别从低到高分为: TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 日志输出级别 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"INFO"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"CONSOLE"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"SYS_INFO"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"SYS_ERROR"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"SYS_ALL"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"LOGSTASH"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="1-准备虚拟机搭建环境-CentOS6"><a href="#1-准备虚拟机搭建环境-CentOS6" class="headerlink" title="1.准备虚拟机搭建环境(CentOS6)"></a>1.准备虚拟机搭建环境(CentOS6)</h4><h5 id="1-准备3台客户机（关闭防火墙、静态IP、设置主机名称）"><a href="#1-准备3台客户机（关闭防火墙、静态IP、设置主机名称）" class="headerlink" title="1.准备3台客户机（关闭防火墙、静态IP、设置主机名称）"></a>1.准备3台客户机（关闭防火墙、静态IP、设置主机名称）</h5><h6 id="1-修改IP相关配置"><a href="#1-修改IP相关配置" class="headerlink" title="1.修改IP相关配置"></a>1.修改IP相关配置</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">vi &#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F;70-persistent-net.rules</span><br><span class="line">Shift+$ --&gt; 到末尾</span><br><span class="line">修改NAME</span><br><span class="line">复制物理地址</span><br><span class="line"></span><br><span class="line">vi &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0</span><br><span class="line">粘贴物理地址</span><br><span class="line">修改IP地址</span><br></pre></td></tr></table></figure>
+<p><img src="pic.owlhy.com/blog/20200602223731.png" alt="image"></p>
+<h6 id="2-修改主机名"><a href="#2-修改主机名" class="headerlink" title="2.修改主机名"></a>2.修改主机名</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hostname</span><br><span class="line">vi &#x2F;etc&#x2F;sysconfig&#x2F;network</span><br></pre></td></tr></table></figure>
+<p><img src="pic.owlhy.com/blog/20200602223756.png" alt="image"></p>
+<h6 id="3-重启"><a href="#3-重启" class="headerlink" title="3.重启"></a>3.重启</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h6 id="4-PING外网，测试网络连通性"><a href="#4-PING外网，测试网络连通性" class="headerlink" title="4.PING外网，测试网络连通性"></a>4.PING外网，测试网络连通性</h6><hr>
+<h5 id="2-安装JDK"><a href="#2-安装JDK" class="headerlink" title="2.安装JDK"></a>2.安装JDK</h5><h6 id="0-切换到root用户"><a href="#0-切换到root用户" class="headerlink" title="0.切换到root用户"></a>0.切换到root用户</h6><h6 id="1-清空-opt目录"><a href="#1-清空-opt目录" class="headerlink" title="1.清空/opt目录"></a>1.清空/opt目录</h6><h6 id="2-创建文件夹software和module"><a href="#2-创建文件夹software和module" class="headerlink" title="2.创建文件夹software和module"></a>2.创建文件夹software和module</h6><h6 id="3-授权"><a href="#3-授权" class="headerlink" title="3.授权"></a>3.授权</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown giraffey:giraffey module software</span><br></pre></td></tr></table></figure>
+<h6 id="4-切换到普通（giraffey）用户"><a href="#4-切换到普通（giraffey）用户" class="headerlink" title="4.切换到普通（giraffey）用户"></a>4.切换到普通（giraffey）用户</h6><h6 id="5-上传安装包"><a href="#5-上传安装包" class="headerlink" title="5.上传安装包"></a>5.上传安装包</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主机之间可以使用scp命令进行拷贝</span><br><span class="line">scp -r（递归） 需要拷贝的文件 用户@主机名或主机地址:&#x2F;opt</span><br></pre></td></tr></table></figure>
 
+<h5 id="3-配置JDK环境变量"><a href="#3-配置JDK环境变量" class="headerlink" title="3.配置JDK环境变量"></a>3.配置JDK环境变量</h5><h5 id="4-安装Hadoop"><a href="#4-安装Hadoop" class="headerlink" title="4.安装Hadoop"></a>4.安装Hadoop</h5><h5 id="5-配置Hadoop环境变量"><a href="#5-配置Hadoop环境变量" class="headerlink" title="5.配置Hadoop环境变量"></a>5.配置Hadoop环境变量</h5><h5 id="6-安装ssh"><a href="#6-安装ssh" class="headerlink" title="6.安装ssh"></a>6.安装ssh</h5><h6 id="配置ssh免密登录"><a href="#配置ssh免密登录" class="headerlink" title="配置ssh免密登录"></a>配置ssh免密登录</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.进入到想要免密登录的用户的家目录下</span><br><span class="line">cd ~</span><br><span class="line">ls -la</span><br><span class="line">cd .ssh</span><br><span class="line">2.生成秘钥对</span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line">连敲三个回车</span><br><span class="line"></span><br><span class="line">3.拷贝公钥</span><br><span class="line">ssh-copy-id 拷贝到的主机名或主机地址</span><br><span class="line">eg: ssh-copy-id 192.168.1.1</span><br><span class="line">注：本主机也要拷贝一次</span><br></pre></td></tr></table></figure>
+<h5 id="7-rsync远程同步工具，主要用于备份和镜像，具有速度快、避免复制相同内容和支持符号链接的优点"><a href="#7-rsync远程同步工具，主要用于备份和镜像，具有速度快、避免复制相同内容和支持符号链接的优点" class="headerlink" title="7.rsync远程同步工具，主要用于备份和镜像，具有速度快、避免复制相同内容和支持符号链接的优点"></a>7.rsync远程同步工具，主要用于备份和镜像，具有速度快、避免复制相同内容和支持符号链接的优点</h5><p><strong>基本语法：</strong><br>同步时，会替换/覆盖之前已有的文件<br><img src="pic.owlhy.com/blog/20200602223855.png" alt="image"></p>
+<h5 id="8-编写集群分发的脚本xsync"><a href="#8-编写集群分发的脚本xsync" class="headerlink" title="8.编写集群分发的脚本xsync"></a>8.编写集群分发的脚本xsync</h5><h6 id="1-循环复制文件到所有节点的相同目录下"><a href="#1-循环复制文件到所有节点的相同目录下" class="headerlink" title="1.循环复制文件到所有节点的相同目录下"></a>1.循环复制文件到所有节点的相同目录下</h6><p><img src="pic.owlhy.com/blog/20200602223915.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;bin</span><br><span class="line">touch xsync</span><br></pre></td></tr></table></figure>
+<p><img src="pic.owlhy.com/blog/20200602223948.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">修改脚本权限</span><br><span class="line">chmod 777 xsync</span><br></pre></td></tr></table></figure>
+
+<h5 id="8-编写分发脚本xcall"><a href="#8-编写分发脚本xcall" class="headerlink" title="8.编写分发脚本xcall"></a>8.编写分发脚本xcall</h5><p><img src="pic.owlhy.com/blog/20200602224005.png" alt="image"></p>
+<h4 id="注：集群中的用户名密码最好统一，否则再编写脚本时，贼鸡儿麻烦！"><a href="#注：集群中的用户名密码最好统一，否则再编写脚本时，贼鸡儿麻烦！" class="headerlink" title="注：集群中的用户名密码最好统一，否则再编写脚本时，贼鸡儿麻烦！"></a>注：集群中的用户名密码最好统一，否则再编写脚本时，贼鸡儿麻烦！</h4>
       
     </div>
     
@@ -528,9 +535,9 @@ function setSidebarMarginTop (headerOffset) {
       
         <div class="post-tags">
           
-            <a href="/tags/springboot/" rel="tag"><i class="fa fa-tag"></i> springboot</a>
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
           
-            <a href="/tags/log/" rel="tag"><i class="fa fa-tag"></i> log</a>
+            <a href="/tags/hadoop/" rel="tag"><i class="fa fa-tag"></i> hadoop</a>
           
         </div>
       
@@ -543,8 +550,8 @@ function setSidebarMarginTop (headerOffset) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/redis-config.html" rel="next" title="【REDIS配置详解】">
-                <i class="fa fa-chevron-left"></i> 【REDIS配置详解】
+              <a href="/hadoop-04.html" rel="next" title="【Hadoop学习笔记 -- 修改本地临时文件存储目录】">
+                <i class="fa fa-chevron-left"></i> 【Hadoop学习笔记 -- 修改本地临时文件存储目录】
               </a>
             
           </div>
@@ -553,8 +560,8 @@ function setSidebarMarginTop (headerOffset) {
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/test.html" rel="prev" title="test">
-                test <i class="fa fa-chevron-right"></i>
+              <a href="/linux-base.html" rel="prev" title="【LINUX日常命令】">
+                【LINUX日常命令】 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -700,7 +707,7 @@ function setSidebarMarginTop (headerOffset) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现功能"><span class="nav-number">1.</span> <span class="nav-text">实现功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logback-boot-xml"><span class="nav-number">2.</span> <span class="nav-text">logback-boot.xml</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-准备虚拟机搭建环境-CentOS6"><span class="nav-number">1.</span> <span class="nav-text">1.准备虚拟机搭建环境(CentOS6)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-准备3台客户机（关闭防火墙、静态IP、设置主机名称）"><span class="nav-number">1.1.</span> <span class="nav-text">1.准备3台客户机（关闭防火墙、静态IP、设置主机名称）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-修改IP相关配置"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.修改IP相关配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-修改主机名"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.修改主机名</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-重启"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.重启</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-PING外网，测试网络连通性"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.PING外网，测试网络连通性</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-安装JDK"><span class="nav-number">1.2.</span> <span class="nav-text">2.安装JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#0-切换到root用户"><span class="nav-number">1.2.1.</span> <span class="nav-text">0.切换到root用户</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-清空-opt目录"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.清空&#x2F;opt目录</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-创建文件夹software和module"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.创建文件夹software和module</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-授权"><span class="nav-number">1.2.4.</span> <span class="nav-text">3.授权</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-切换到普通（giraffey）用户"><span class="nav-number">1.2.5.</span> <span class="nav-text">4.切换到普通（giraffey）用户</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-上传安装包"><span class="nav-number">1.2.6.</span> <span class="nav-text">5.上传安装包</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-配置JDK环境变量"><span class="nav-number">1.3.</span> <span class="nav-text">3.配置JDK环境变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-安装Hadoop"><span class="nav-number">1.4.</span> <span class="nav-text">4.安装Hadoop</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-配置Hadoop环境变量"><span class="nav-number">1.5.</span> <span class="nav-text">5.配置Hadoop环境变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-安装ssh"><span class="nav-number">1.6.</span> <span class="nav-text">6.安装ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#配置ssh免密登录"><span class="nav-number">1.6.1.</span> <span class="nav-text">配置ssh免密登录</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-rsync远程同步工具，主要用于备份和镜像，具有速度快、避免复制相同内容和支持符号链接的优点"><span class="nav-number">1.7.</span> <span class="nav-text">7.rsync远程同步工具，主要用于备份和镜像，具有速度快、避免复制相同内容和支持符号链接的优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-编写集群分发的脚本xsync"><span class="nav-number">1.8.</span> <span class="nav-text">8.编写集群分发的脚本xsync</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-循环复制文件到所有节点的相同目录下"><span class="nav-number">1.8.1.</span> <span class="nav-text">1.循环复制文件到所有节点的相同目录下</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-编写分发脚本xcall"><span class="nav-number">1.9.</span> <span class="nav-text">8.编写分发脚本xcall</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注：集群中的用户名密码最好统一，否则再编写脚本时，贼鸡儿麻烦！"><span class="nav-number">2.</span> <span class="nav-text">注：集群中的用户名密码最好统一，否则再编写脚本时，贼鸡儿麻烦！</span></a></li></ol></div>
             
 
           </div>

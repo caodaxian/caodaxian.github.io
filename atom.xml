@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://owlhy.com/"/>
-  <updated>2020-05-15T03:46:23.845Z</updated>
+  <updated>2020-06-01T09:25:31.500Z</updated>
   <id>https://owlhy.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://owlhy.com/test.html"/>
+    <id>https://owlhy.com/test.html</id>
+    <published>2020-06-01T05:52:33.289Z</published>
+    <updated>2020-06-01T09:25:31.500Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;http://pic.owlhy.com/blog/desktop.jpeg&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>【SpringBoot中logback处理日志】</title>
@@ -128,6 +151,140 @@
       <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
     
       <category term="shell" scheme="https://owlhy.com/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Hadoop学习笔记 -- 完全分布式搭建】</title>
+    <link href="https://owlhy.com/hadoop-05.html"/>
+    <id>https://owlhy.com/hadoop-05.html</id>
+    <published>2018-11-28T16:00:00.000Z</published>
+    <updated>2020-06-02T14:40:26.541Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;: 之前的笔记中记录了Hadoop伪分布式的搭建，但是在实际中，伪分布式是远远不能够满足需求的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Hadoop学习笔记 -- 修改本地临时文件存储目录】</title>
+    <link href="https://owlhy.com/hadoop-04.html"/>
+    <id>https://owlhy.com/hadoop-04.html</id>
+    <published>2018-11-26T04:00:12.000Z</published>
+    <updated>2020-06-02T14:36:07.249Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;1-修改本地临时文件存储目录&quot;&gt;&lt;a href=&quot;#1-修改本地临时文件存储目录&quot; class=&quot;headerlink&quot; title=&quot;1.修改本地临时文件存储目录&quot;&gt;&lt;/a&gt;1.修改本地临时文件存储目录&lt;/h4&gt;&lt;h5 id=&quot;1-停止进程&quot;&gt;&lt;a href=&quot;#1-停止进程&quot; class=&quot;headerlink&quot; title=&quot;1.停止进程&quot;&gt;&lt;/a&gt;1.停止进程&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#退出集群&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#1.退出ResourceManager和NodeManager:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sibn&amp;#x2F;yarn-daemon.sh stop resourcemanager&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sibn&amp;#x2F;yarn-daemon.sh stop nodemanager&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#2.退出NameNode和DataNode:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sibn&amp;#x2F;hadoop-daemon.sh stop namenode&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sibn&amp;#x2F;hadoop-daemon.sh stop datanode&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Hadoop学习笔记 -- 在Yarn上运行MapReduce程序】</title>
+    <link href="https://owlhy.com/hadoop-03.html"/>
+    <id>https://owlhy.com/hadoop-03.html</id>
+    <published>2018-11-17T04:21:12.000Z</published>
+    <updated>2020-06-02T14:33:17.432Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-测试为分布式案例&quot;&gt;&lt;a href=&quot;#1-测试为分布式案例&quot; class=&quot;headerlink&quot; title=&quot;1.测试为分布式案例&quot;&gt;&lt;/a&gt;1.测试为分布式案例&lt;/h3&gt;&lt;h4 id=&quot;1-在YARN上运行MapReduce程序（分析）&quot;&gt;&lt;a href=&quot;#1-在YARN上运行MapReduce程序（分析）&quot; class=&quot;headerlink&quot; title=&quot;1.在YARN上运行MapReduce程序（分析）&quot;&gt;&lt;/a&gt;1.在YARN上运行MapReduce程序（分析）&lt;/h4&gt;&lt;h5 id=&quot;1-1准备一台客户机&quot;&gt;&lt;a href=&quot;#1-1准备一台客户机&quot; class=&quot;headerlink&quot; title=&quot;1.1准备一台客户机&quot;&gt;&lt;/a&gt;1.1准备一台客户机&lt;/h5&gt;&lt;h5 id=&quot;1-2安装JDK&quot;&gt;&lt;a href=&quot;#1-2安装JDK&quot; class=&quot;headerlink&quot; title=&quot;1.2安装JDK&quot;&gt;&lt;/a&gt;1.2安装JDK&lt;/h5&gt;&lt;h5 id=&quot;1-3配置JDK的环境变量&quot;&gt;&lt;a href=&quot;#1-3配置JDK的环境变量&quot; class=&quot;headerlink&quot; title=&quot;1.3配置JDK的环境变量&quot;&gt;&lt;/a&gt;1.3配置JDK的环境变量&lt;/h5&gt;&lt;h5 id=&quot;1-4安装Hadoop&quot;&gt;&lt;a href=&quot;#1-4安装Hadoop&quot; class=&quot;headerlink&quot; title=&quot;1.4安装Hadoop&quot;&gt;&lt;/a&gt;1.4安装Hadoop&lt;/h5&gt;&lt;h5 id=&quot;1-5配置Hadoop的环境变量&quot;&gt;&lt;a href=&quot;#1-5配置Hadoop的环境变量&quot; class=&quot;headerlink&quot; title=&quot;1.5配置Hadoop的环境变量&quot;&gt;&lt;/a&gt;1.5配置Hadoop的环境变量&lt;/h5&gt;&lt;h5 id=&quot;1-6配置集群在YARN上运行&quot;&gt;&lt;a href=&quot;#1-6配置集群在YARN上运行&quot; class=&quot;headerlink&quot; title=&quot;1.6配置集群在YARN上运行&quot;&gt;&lt;/a&gt;1.6配置集群在YARN上运行&lt;/h5&gt;&lt;h5 id=&quot;1-7启用集群，增删改查测试&quot;&gt;&lt;a href=&quot;#1-7启用集群，增删改查测试&quot; class=&quot;headerlink&quot; title=&quot;1.7启用集群，增删改查测试&quot;&gt;&lt;/a&gt;1.7启用集群，增删改查测试&lt;/h5&gt;&lt;h5 id=&quot;1-8在YARN上运行wordcount案例&quot;&gt;&lt;a href=&quot;#1-8在YARN上运行wordcount案例&quot; class=&quot;headerlink&quot; title=&quot;1.8在YARN上运行wordcount案例&quot;&gt;&lt;/a&gt;1.8在YARN上运行wordcount案例&lt;/h5&gt;
+    
+    </summary>
+    
+    
+      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Hadoop学习笔记 -- 在HDFS上运行MapReduce程序】</title>
+    <link href="https://owlhy.com/hadoop-02.html"/>
+    <id>https://owlhy.com/hadoop-02.html</id>
+    <published>2018-11-16T04:21:12.000Z</published>
+    <updated>2020-06-02T14:33:12.714Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-测试为分布式案例&quot;&gt;&lt;a href=&quot;#1-测试为分布式案例&quot; class=&quot;headerlink&quot; title=&quot;1.测试为分布式案例&quot;&gt;&lt;/a&gt;1.测试为分布式案例&lt;/h3&gt;&lt;h4 id=&quot;1-在HDFS上运行MapReduce程序&quot;&gt;&lt;a href=&quot;#1-在HDFS上运行MapReduce程序&quot; class=&quot;headerlink&quot; title=&quot;1.在HDFS上运行MapReduce程序&quot;&gt;&lt;/a&gt;1.在HDFS上运行MapReduce程序&lt;/h4&gt;&lt;h5 id=&quot;1-1准备一台客户机&quot;&gt;&lt;a href=&quot;#1-1准备一台客户机&quot; class=&quot;headerlink&quot; title=&quot;1.1准备一台客户机&quot;&gt;&lt;/a&gt;1.1准备一台客户机&lt;/h5&gt;&lt;h5 id=&quot;1-2安装JDK&quot;&gt;&lt;a href=&quot;#1-2安装JDK&quot; class=&quot;headerlink&quot; title=&quot;1.2安装JDK&quot;&gt;&lt;/a&gt;1.2安装JDK&lt;/h5&gt;&lt;h5 id=&quot;1-3配置JDK的环境变量&quot;&gt;&lt;a href=&quot;#1-3配置JDK的环境变量&quot; class=&quot;headerlink&quot; title=&quot;1.3配置JDK的环境变量&quot;&gt;&lt;/a&gt;1.3配置JDK的环境变量&lt;/h5&gt;&lt;h5 id=&quot;1-4安装Hadoop&quot;&gt;&lt;a href=&quot;#1-4安装Hadoop&quot; class=&quot;headerlink&quot; title=&quot;1.4安装Hadoop&quot;&gt;&lt;/a&gt;1.4安装Hadoop&lt;/h5&gt;&lt;h5 id=&quot;1-5配置Hadoop的环境变量&quot;&gt;&lt;a href=&quot;#1-5配置Hadoop的环境变量&quot; class=&quot;headerlink&quot; title=&quot;1.5配置Hadoop的环境变量&quot;&gt;&lt;/a&gt;1.5配置Hadoop的环境变量&lt;/h5&gt;
+    
+    </summary>
+    
+    
+      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Hadoop学习笔记 -- 搭建Hadoop环境】</title>
+    <link href="https://owlhy.com/hadoop-01.html"/>
+    <id>https://owlhy.com/hadoop-01.html</id>
+    <published>2018-11-15T04:21:12.000Z</published>
+    <updated>2020-06-02T14:31:38.868Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h3&gt;&lt;hr&gt;
+&lt;h4 id=&quot;名词解释：&quot;&gt;&lt;a href=&quot;#名词解释：&quot; class=&quot;headerlink&quot; title=&quot;名词解释：&quot;&gt;&lt;/a&gt;名词解释：&lt;/h4&gt;&lt;p&gt;Hadoop:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HDFS:&lt;ul&gt;
+&lt;li&gt;Namenode:管理目录文件，相当于书的目录；&lt;/li&gt;
+&lt;li&gt;Datanode:管理数据存储具体的数据,相当于具体的书；&lt;/li&gt;
+&lt;li&gt;Secondarynamenode:是辅助NameNode工作的;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;YARN：资源调度管理器&lt;ul&gt;
+&lt;li&gt;ResourceManager：总的管理器&lt;/li&gt;
+&lt;li&gt;NodeManager：具体节点的管理器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MapReduce:&lt;ul&gt;
+&lt;li&gt;Map：并行的将文件读入&lt;/li&gt;
+&lt;li&gt;Reduce：将并行过来的文件合并成单一出口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+    
+    
+      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+    
+      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
     
   </entry>
   

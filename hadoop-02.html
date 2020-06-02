@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="springboot,log," />
+  <meta name="keywords" content="linux,hadoop," />
 
 
 
@@ -98,17 +98,17 @@
 
 
 
-<meta name="description" content="实现功能 每60M分割日志 按天分割日志 日志推送到LogStach">
+<meta name="description" content="1.测试为分布式案例1.在HDFS上运行MapReduce程序1.1准备一台客户机1.2安装JDK1.3配置JDK的环境变量1.4安装Hadoop1.5配置Hadoop的环境变量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【SpringBoot中logback处理日志】">
-<meta property="og:url" content="https://owlhy.com/springboot-logback.html">
+<meta property="og:title" content="【Hadoop学习笔记 -- 在HDFS上运行MapReduce程序】">
+<meta property="og:url" content="https://owlhy.com/hadoop-02.html">
 <meta property="og:site_name" content="曹大仙儿">
-<meta property="og:description" content="实现功能 每60M分割日志 按天分割日志 日志推送到LogStach">
-<meta property="article:published_time" content="2020-04-07T14:21:11.000Z">
-<meta property="article:modified_time" content="2020-05-15T03:46:23.845Z">
+<meta property="og:description" content="1.测试为分布式案例1.在HDFS上运行MapReduce程序1.1准备一台客户机1.2安装JDK1.3配置JDK的环境变量1.4安装Hadoop1.5配置Hadoop的环境变量">
+<meta property="article:published_time" content="2018-11-16T04:21:12.000Z">
+<meta property="article:modified_time" content="2020-06-02T14:33:12.714Z">
 <meta property="article:author" content="CAO.DA.XIAN">
-<meta property="article:tag" content="springboot">
-<meta property="article:tag" content="log">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="hadoop">
 <meta name="twitter:card" content="summary">
 
 
@@ -139,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="https://owlhy.com/springboot-logback.html"/>
+  <link rel="canonical" href="https://owlhy.com/hadoop-02.html"/>
 
 
 
@@ -155,7 +155,7 @@
   </script>
 
 
-  <title>【SpringBoot中logback处理日志】 | 曹大仙儿</title>
+  <title>【Hadoop学习笔记 -- 在HDFS上运行MapReduce程序】 | 曹大仙儿</title>
   
 
 
@@ -355,7 +355,7 @@ function setSidebarMarginTop (headerOffset) {
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://owlhy.com/springboot-logback.html">
+    <link itemprop="mainEntityOfPage" href="https://owlhy.com/hadoop-02.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CAO.DA.XIAN">
@@ -372,7 +372,7 @@ function setSidebarMarginTop (headerOffset) {
 
         
         
-          <h1 class="post-title" itemprop="name headline">【SpringBoot中logback处理日志】</h1>
+          <h1 class="post-title" itemprop="name headline">【Hadoop学习笔记 -- 在HDFS上运行MapReduce程序】</h1>
         
 
         <div class="post-meta">
@@ -384,8 +384,8 @@ function setSidebarMarginTop (headerOffset) {
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T22:21:11+08:00">
-                2020-04-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-16T12:21:12+08:00">
+                2018-11-16
               </time>
             
 
@@ -407,19 +407,8 @@ function setSidebarMarginTop (headerOffset) {
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/springboot/" itemprop="url" rel="index">
-                    <span itemprop="name">springboot</span>
+                  <a href="/categories/hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">hadoop</span>
                   </a>
                 </span>
 
@@ -454,7 +443,7 @@ function setSidebarMarginTop (headerOffset) {
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  780 字
+                  654 字
                 </span>
               
 
@@ -470,7 +459,7 @@ function setSidebarMarginTop (headerOffset) {
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -491,15 +480,38 @@ function setSidebarMarginTop (headerOffset) {
       
 
       
-        <h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul>
-<li>每60M分割日志</li>
-<li>按天分割日志</li>
-<li>日志推送到LogStach</li>
-</ul>
-<hr>
-<a id="more"></a>
+        <h3 id="1-测试为分布式案例"><a href="#1-测试为分布式案例" class="headerlink" title="1.测试为分布式案例"></a>1.测试为分布式案例</h3><h4 id="1-在HDFS上运行MapReduce程序"><a href="#1-在HDFS上运行MapReduce程序" class="headerlink" title="1.在HDFS上运行MapReduce程序"></a>1.在HDFS上运行MapReduce程序</h4><h5 id="1-1准备一台客户机"><a href="#1-1准备一台客户机" class="headerlink" title="1.1准备一台客户机"></a>1.1准备一台客户机</h5><h5 id="1-2安装JDK"><a href="#1-2安装JDK" class="headerlink" title="1.2安装JDK"></a>1.2安装JDK</h5><h5 id="1-3配置JDK的环境变量"><a href="#1-3配置JDK的环境变量" class="headerlink" title="1.3配置JDK的环境变量"></a>1.3配置JDK的环境变量</h5><h5 id="1-4安装Hadoop"><a href="#1-4安装Hadoop" class="headerlink" title="1.4安装Hadoop"></a>1.4安装Hadoop</h5><h5 id="1-5配置Hadoop的环境变量"><a href="#1-5配置Hadoop的环境变量" class="headerlink" title="1.5配置Hadoop的环境变量"></a>1.5配置Hadoop的环境变量</h5><a id="more"></a>
 
-<h2 id="logback-boot-xml"><a href="#logback-boot-xml" class="headerlink" title="logback-boot.xml"></a>logback-boot.xml</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">conversionRule</span> <span class="attr">conversionWord</span>=<span class="string">"clr"</span> <span class="attr">converterClass</span>=<span class="string">"org.springframework.boot.logging.logback.ColorConverter"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"PATTERN_COLOR"</span> <span class="attr">value</span>=<span class="string">"%-12(%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125;) |%clr(-%-5level) %clr([%X&#123;localIP&#125;]) %clr([%thread]) %yellow(at %class.%method) \\(%file:%line\\) %green([%X&#123;requestId&#125;]) %clr(-|) %highlight(%msg%n)"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--去除--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"PATTERN"</span> <span class="attr">value</span>=<span class="string">"%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; |-%-5level [%X&#123;localIP&#125;] [%thread] at %class.%method \\(%file:%line\\) [%X&#123;requestId&#125;] -| %msg%n"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"LOG_HOME"</span> <span class="attr">value</span>=<span class="string">"./logs"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 控制台 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"CONSOLE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;PATTERN_COLOR&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- SYS_INFO --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"SYS_INFO"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.RollingFileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">File</span>&gt;</span>$&#123;LOG_HOME&#125;/info.log<span class="tag">&lt;/<span class="name">File</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--过滤器,只打INFO级别的日志--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.filter.LevelFilter"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">level</span>&gt;</span>INFO<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMatch</span>&gt;</span>ACCEPT<span class="tag">&lt;/<span class="name">onMatch</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">onMismatch</span>&gt;</span>DENY<span class="tag">&lt;/<span class="name">onMismatch</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">FileNamePattern</span>&gt;</span>$&#123;LOG_HOME&#125;/info/%d&#123;yyyy-MM,aux&#125;/info-%d&#123;yyyy-MM-dd&#125;.%i.log<span class="tag">&lt;/<span class="name">FileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxHistory</span>&gt;</span>90<span class="tag">&lt;/<span class="name">MaxHistory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxFileSize</span>&gt;</span>60MB<span class="tag">&lt;/<span class="name">MaxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">totalSizeCap</span>&gt;</span>5GB<span class="tag">&lt;/<span class="name">totalSizeCap</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.encoder.PatternLayoutEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;PATTERN&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- SYS_ERROR --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"SYS_ERROR"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.RollingFileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">File</span>&gt;</span>$&#123;LOG_HOME&#125;/error.log<span class="tag">&lt;/<span class="name">File</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 按临界值过滤日志：低于ERROR以下级别被抛弃 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.filter.ThresholdFilter"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">level</span>&gt;</span>ERROR<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">FileNamePattern</span>&gt;</span>$&#123;LOG_HOME&#125;/error/%d&#123;yyyy-MM,aux&#125;/error-%d&#123;yyyy-MM-dd&#125;.%i.log<span class="tag">&lt;/<span class="name">FileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxHistory</span>&gt;</span>90<span class="tag">&lt;/<span class="name">MaxHistory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxFileSize</span>&gt;</span>60MB<span class="tag">&lt;/<span class="name">MaxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">totalSizeCap</span>&gt;</span>5GB<span class="tag">&lt;/<span class="name">totalSizeCap</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.encoder.PatternLayoutEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;PATTERN&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- SYS_ALL --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"SYS_ALL"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.RollingFileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">File</span>&gt;</span>$&#123;LOG_HOME&#125;/../owlhy.log<span class="tag">&lt;/<span class="name">File</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">rollingPolicy</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">FileNamePattern</span>&gt;</span>$&#123;LOG_HOME&#125;/owlhy/%d&#123;yyyy-MM,aux&#125;/owlhy-%d&#123;yyyy-MM-dd&#125;.%i.log<span class="tag">&lt;/<span class="name">FileNamePattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxHistory</span>&gt;</span>90<span class="tag">&lt;/<span class="name">MaxHistory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">MaxFileSize</span>&gt;</span>60MB<span class="tag">&lt;/<span class="name">MaxFileSize</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">totalSizeCap</span>&gt;</span>5GB<span class="tag">&lt;/<span class="name">totalSizeCap</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">rollingPolicy</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.encoder.PatternLayoutEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;PATTERN_COLOR&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- LOGSTASH --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"LOGSTASH"</span> <span class="attr">class</span>=<span class="string">"net.logstash.logback.appender.LogstashTcpSocketAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">destination</span>&gt;</span>10.1.192.188:9100<span class="tag">&lt;/<span class="name">destination</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">includeCallerData</span>&gt;</span>true<span class="tag">&lt;/<span class="name">includeCallerData</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"net.logstash.logback.encoder.LogstashEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">includeCallerData</span>&gt;</span>true<span class="tag">&lt;/<span class="name">includeCallerData</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 日志级别从低到高分为: TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 日志输出级别 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"INFO"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"CONSOLE"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"SYS_INFO"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"SYS_ERROR"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"SYS_ALL"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"LOGSTASH"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="1-6配置集群"><a href="#1-6配置集群" class="headerlink" title="1.6配置集群"></a>1.6配置集群</h5><h6 id="配置：hadoop-env-sh"><a href="#配置：hadoop-env-sh" class="headerlink" title="配置：hadoop-env.sh"></a>配置：hadoop-env.sh</h6><ul>
+<li>更换JDK环境变量（同笔记01）<h6 id="配置：core-site-xml"><a href="#配置：core-site-xml" class="headerlink" title="配置：core-site.xml"></a>配置：core-site.xml</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;!-- 指定HDFS中NameNode的地址 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;hdfs:&#x2F;&#x2F;hadoop101:8020&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;&#x2F;property&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 指定Hadoop运行时产生文件的存储目录 --&gt;</span><br><span class="line">    &lt;!-- 开始搭建时可以暂不考虑 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;&#x2F;opt&#x2F;module&#x2F;hadoop-2.7.2&#x2F;data&#x2F;tmp&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;&#x2F;property&gt; </span><br><span class="line">&lt;&#x2F;configuration&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="配置：hdfs-site-xml"><a href="#配置：hdfs-site-xml" class="headerlink" title="配置：hdfs-site.xml"></a>配置：hdfs-site.xml</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;!-- 指定HDFS副本的数量:</span><br><span class="line">        如果有只一台机器，即使副本数配置成3份，也只会备份1个 --&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.replication&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;1&lt;&#x2F;value&gt;</span><br><span class="line">    &lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;configuration&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="1-7启动集群"><a href="#1-7启动集群" class="headerlink" title="1.7启动集群"></a>1.7启动集群</h5><h6 id="1-格式化NameNode（第一次启动时格式化，以后就不要总格式化）"><a href="#1-格式化NameNode（第一次启动时格式化，以后就不要总格式化）" class="headerlink" title="1.格式化NameNode（第一次启动时格式化，以后就不要总格式化）"></a>1.格式化NameNode（第一次启动时格式化，以后就不要总格式化）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hdfs namenode -format</span><br><span class="line">注：该命令在bin目录下</span><br></pre></td></tr></table></figure>
+<h6 id="2-启动NameNode"><a href="#2-启动NameNode" class="headerlink" title="2.启动NameNode"></a>2.启动NameNode</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hadoop-daemon.sh start namenode</span><br><span class="line">注：该命令在sbin目录下</span><br></pre></td></tr></table></figure>
+<h6 id="3-启动DataNode"><a href="#3-启动DataNode" class="headerlink" title="3.启动DataNode"></a>3.启动DataNode</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hadoop-daemon.sh start datanode</span><br><span class="line">注：该命令在sbin目录下</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="1-8查看集群"><a href="#1-8查看集群" class="headerlink" title="1.8查看集群"></a>1.8查看集群</h5><h6 id="1-jps命令查看启动进程"><a href="#1-jps命令查看启动进程" class="headerlink" title="1.jps命令查看启动进程"></a>1.jps命令查看启动进程</h6><h6 id="2-查看产生的log日志"><a href="#2-查看产生的log日志" class="headerlink" title="2.查看产生的log日志"></a>2.查看产生的log日志</h6><ul>
+<li>cd /hadoop-2.7.2/logs<h6 id="3-WEB端查看HDFS文件系统"><a href="#3-WEB端查看HDFS文件系统" class="headerlink" title="3.WEB端查看HDFS文件系统"></a>3.WEB端查看HDFS文件系统</h6></li>
+<li>URL： 主机地址:50070</li>
+</ul>
+<h5 id="1-9操作集群"><a href="#1-9操作集群" class="headerlink" title="1.9操作集群"></a>1.9操作集群</h5><h6 id="1-在HDFS文件系统上新建一个input文件夹"><a href="#1-在HDFS文件系统上新建一个input文件夹" class="headerlink" title="1.在HDFS文件系统上新建一个input文件夹"></a>1.在HDFS文件系统上新建一个input文件夹</h6><ul>
+<li>hadoop fs 和 bin/hdfs dfs 通用</li>
+<li><strong>HDFS默认的根目录是：</strong>/</li>
+<li>hadoop fs -mkdir -p /user/giraffey375/input (-p表示多级目录)</li>
+<li><strong>在WEB查看创建结果</strong></li>
+<li><strong>在Shell端查看:</strong><ul>
+<li>hadoop fs -ls -R /</li>
+<li>或：hadoop fs -lsr /<h6 id="2-上传测试文件到HDFS"><a href="#2-上传测试文件到HDFS" class="headerlink" title="2.上传测试文件到HDFS"></a>2.上传测试文件到HDFS</h6></li>
+</ul>
+</li>
+<li>hadoop fs -put wcinput/wc.input(测试文件) /user/giraffey375/input(目标文件位置)<h6 id="3-在HDFS上运行mapreduce程序"><a href="#3-在HDFS上运行mapreduce程序" class="headerlink" title="3.在HDFS上运行mapreduce程序"></a>3.在HDFS上运行mapreduce程序</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop jar share&#x2F;hadoop&#x2F;mapreduce&#x2F;hadoop-mapreduce-examples-2.7.2 jar wordcount(案例名称) &#x2F;user&#x2F;giraffey375&#x2F;input &#x2F;user&#x2F;giraffey375&#x2F;output</span><br></pre></td></tr></table></figure>
+<h6 id="4-查看执行结果"><a href="#4-查看执行结果" class="headerlink" title="4.查看执行结果"></a>4.查看执行结果</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -cat &#x2F;user&#x2F;giraffey375&#x2F;output&#x2F;p*</span><br></pre></td></tr></table></figure>
+<h6 id="5-删除输出文件夹：否则下次就不能运行了"><a href="#5-删除输出文件夹：否则下次就不能运行了" class="headerlink" title="5.删除输出文件夹：否则下次就不能运行了"></a>5.删除输出文件夹：否则下次就不能运行了</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -rmr &#x2F;user&#x2F;giraffey375&#x2F;output</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在第二次启动时，会有文件残留。</span><br><span class="line">因为 hdfs namenode -format 产生了一个新的Namenode文件(id)，就不认识之前的datanode了，所以导致集群不能正常启动。</span><br><span class="line">解决办法：在格式化之前，删除datanode中的信息（默认在&#x2F;tmp,如果配置了该目录，就去到该目录(hadoop-2.7.2&#x2F;data&#x2F;tmp)删除）</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -528,9 +540,9 @@ function setSidebarMarginTop (headerOffset) {
       
         <div class="post-tags">
           
-            <a href="/tags/springboot/" rel="tag"><i class="fa fa-tag"></i> springboot</a>
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
           
-            <a href="/tags/log/" rel="tag"><i class="fa fa-tag"></i> log</a>
+            <a href="/tags/hadoop/" rel="tag"><i class="fa fa-tag"></i> hadoop</a>
           
         </div>
       
@@ -543,8 +555,8 @@ function setSidebarMarginTop (headerOffset) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/redis-config.html" rel="next" title="【REDIS配置详解】">
-                <i class="fa fa-chevron-left"></i> 【REDIS配置详解】
+              <a href="/hadoop-01.html" rel="next" title="【Hadoop学习笔记 -- 搭建Hadoop环境】">
+                <i class="fa fa-chevron-left"></i> 【Hadoop学习笔记 -- 搭建Hadoop环境】
               </a>
             
           </div>
@@ -553,8 +565,8 @@ function setSidebarMarginTop (headerOffset) {
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/test.html" rel="prev" title="test">
-                test <i class="fa fa-chevron-right"></i>
+              <a href="/hadoop-03.html" rel="prev" title="【Hadoop学习笔记 -- 在Yarn上运行MapReduce程序】">
+                【Hadoop学习笔记 -- 在Yarn上运行MapReduce程序】 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -700,7 +712,7 @@ function setSidebarMarginTop (headerOffset) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现功能"><span class="nav-number">1.</span> <span class="nav-text">实现功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logback-boot-xml"><span class="nav-number">2.</span> <span class="nav-text">logback-boot.xml</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-测试为分布式案例"><span class="nav-number">1.</span> <span class="nav-text">1.测试为分布式案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-在HDFS上运行MapReduce程序"><span class="nav-number">1.1.</span> <span class="nav-text">1.在HDFS上运行MapReduce程序</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1准备一台客户机"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1准备一台客户机</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2安装JDK"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2安装JDK</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3配置JDK的环境变量"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3配置JDK的环境变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-4安装Hadoop"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4安装Hadoop</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-5配置Hadoop的环境变量"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.5配置Hadoop的环境变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-6配置集群"><span class="nav-number">1.1.6.</span> <span class="nav-text">1.6配置集群</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#配置：hadoop-env-sh"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">配置：hadoop-env.sh</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#配置：core-site-xml"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">配置：core-site.xml</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#配置：hdfs-site-xml"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">配置：hdfs-site.xml</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-7启动集群"><span class="nav-number">1.1.7.</span> <span class="nav-text">1.7启动集群</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-格式化NameNode（第一次启动时格式化，以后就不要总格式化）"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">1.格式化NameNode（第一次启动时格式化，以后就不要总格式化）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-启动NameNode"><span class="nav-number">1.1.7.2.</span> <span class="nav-text">2.启动NameNode</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-启动DataNode"><span class="nav-number">1.1.7.3.</span> <span class="nav-text">3.启动DataNode</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-8查看集群"><span class="nav-number">1.1.8.</span> <span class="nav-text">1.8查看集群</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-jps命令查看启动进程"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">1.jps命令查看启动进程</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-查看产生的log日志"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">2.查看产生的log日志</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-WEB端查看HDFS文件系统"><span class="nav-number">1.1.8.3.</span> <span class="nav-text">3.WEB端查看HDFS文件系统</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-9操作集群"><span class="nav-number">1.1.9.</span> <span class="nav-text">1.9操作集群</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-在HDFS文件系统上新建一个input文件夹"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">1.在HDFS文件系统上新建一个input文件夹</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-上传测试文件到HDFS"><span class="nav-number">1.1.9.2.</span> <span class="nav-text">2.上传测试文件到HDFS</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-在HDFS上运行mapreduce程序"><span class="nav-number">1.1.9.3.</span> <span class="nav-text">3.在HDFS上运行mapreduce程序</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-查看执行结果"><span class="nav-number">1.1.9.4.</span> <span class="nav-text">4.查看执行结果</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-删除输出文件夹：否则下次就不能运行了"><span class="nav-number">1.1.9.5.</span> <span class="nav-text">5.删除输出文件夹：否则下次就不能运行了</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注："><span class="nav-number"></span> <span class="nav-text">注：</span></a></div>
             
 
           </div>
