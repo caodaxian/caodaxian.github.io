@@ -716,7 +716,10 @@ function setSidebarMarginTop (headerOffset) {
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <script type="text/javascript" src="https://api.uixsj.cn/hitokoto/w.php?code=js"></script>
+<div id="xsjhitokoto"><script>xsjhitokoto()</script></div>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -772,24 +775,6 @@ function setSidebarMarginTop (headerOffset) {
     <span id="busuanzi_container_site_pv">造访<span id="busuanzi_value_site_pv"></span>次</span>
 
 
-
-<div class="poem-wrap">
-  <div class="poem-border poem-left"></div>
-  <div class="poem-border poem-right"></div>
-    <h1>念两句诗</h1>
-    <p id="poem">挑选中...</p>
-    <p id="info">
-
-  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-  <script type="text/javascript">
-    jinrishici.load(function(result) {
-      poem.innerHTML = result.data.content
-      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-      document.getElementById("poem").value(poem);
-      document.getElementById("info").value(info);  
-  });
-  </script>
-</div>
         
 
 
