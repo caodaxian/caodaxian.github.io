@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://owlhy.com/"/>
-  <updated>2020-06-03T14:14:00.495Z</updated>
+  <updated>2020-07-06T06:33:42.026Z</updated>
   <id>https://owlhy.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【JAVA补血大法】</title>
+    <link href="https://owlhy.com/java-day00.html"/>
+    <id>https://owlhy.com/java-day00.html</id>
+    <published>2020-06-25T04:21:12.000Z</published>
+    <updated>2020-07-06T06:33:42.026Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://owlhy.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="https://owlhy.com/tags/java/"/>
+    
+      <category term="jvm" scheme="https://owlhy.com/tags/jvm/"/>
+    
+      <category term="spring" scheme="https://owlhy.com/tags/spring/"/>
+    
+  </entry>
   
   <entry>
     <title>【いつだって 信じて 可能性 は無限大】</title>
@@ -248,15 +279,15 @@
   </entry>
   
   <entry>
-    <title>【Solr入门--定时导入数据】</title>
-    <link href="https://owlhy.com/solr-04.html"/>
-    <id>https://owlhy.com/solr-04.html</id>
+    <title>【Solr入门--导入数据（基于内置Jetty）】</title>
+    <link href="https://owlhy.com/solr-03.html"/>
+    <id>https://owlhy.com/solr-03.html</id>
     <published>2018-11-19T16:00:00.000Z</published>
-    <updated>2020-06-02T15:01:00.003Z</updated>
+    <updated>2020-06-02T15:00:53.560Z</updated>
     
     <summary type="html">
     
-      &lt;h5 id=&quot;1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot;&gt;&lt;a href=&quot;#1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot; class=&quot;headerlink&quot; title=&quot;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&quot;&gt;&lt;/a&gt;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&lt;/h5&gt;&lt;h5 id=&quot;2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot;&gt;&lt;a href=&quot;#2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot; class=&quot;headerlink&quot; title=&quot;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&quot;&gt;&lt;/a&gt;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;listener-class&amp;gt;org.apache.solr.handler.dataimport.scheduler.ApplicationListener&amp;lt;&amp;#x2F;listener-class&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;#x2F;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;h4 id=&quot;1-准备工作&quot;&gt;&lt;a href=&quot;#1-准备工作&quot; class=&quot;headerlink&quot; title=&quot;1.准备工作&quot;&gt;&lt;/a&gt;1.准备工作&lt;/h4&gt;&lt;h5 id=&quot;搭建配置好solr，新建一个core&quot;&gt;&lt;a href=&quot;#搭建配置好solr，新建一个core&quot; class=&quot;headerlink&quot; title=&quot;搭建配置好solr，新建一个core&quot;&gt;&lt;/a&gt;搭建配置好solr，新建一个core&lt;/h5&gt;&lt;h4 id=&quot;2-修改solrconfig-xml&quot;&gt;&lt;a href=&quot;#2-修改solrconfig-xml&quot; class=&quot;headerlink&quot; title=&quot;2.修改solrconfig.xml&quot;&gt;&lt;/a&gt;2.修改solrconfig.xml&lt;/h4&gt;&lt;h5 id=&quot;1-在的上面添加如下代码&quot;&gt;&lt;a href=&quot;#1-在的上面添加如下代码&quot; class=&quot;headerlink&quot; title=&quot;1.在的上面添加如下代码&quot;&gt;&lt;/a&gt;1.在&lt;requestHandler name=&quot;/select&quot; class=&quot;solr.SearchHandler&quot;&gt;的上面添加如下代码&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;requestHandler name&amp;#x3D;&amp;quot;&amp;#x2F;dataimport&amp;quot; class&amp;#x3D;&amp;quot;org.apache.solr.handler.dataimport.DataImportHandler&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　     &amp;lt;lst name&amp;#x3D;&amp;quot;defaults&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　        &amp;lt;str name&amp;#x3D;&amp;quot;config&amp;quot;&amp;gt;data-config.xml&amp;lt;&amp;#x2F;str&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　     &amp;lt;&amp;#x2F;lst&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　&amp;lt;&amp;#x2F;requestHandler&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -271,15 +302,15 @@
   </entry>
   
   <entry>
-    <title>【Solr入门--导入数据（基于内置Jetty）】</title>
-    <link href="https://owlhy.com/solr-03.html"/>
-    <id>https://owlhy.com/solr-03.html</id>
+    <title>【Solr入门--定时导入数据】</title>
+    <link href="https://owlhy.com/solr-04.html"/>
+    <id>https://owlhy.com/solr-04.html</id>
     <published>2018-11-19T16:00:00.000Z</published>
-    <updated>2020-06-02T15:00:53.560Z</updated>
+    <updated>2020-06-02T15:01:00.003Z</updated>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;1-准备工作&quot;&gt;&lt;a href=&quot;#1-准备工作&quot; class=&quot;headerlink&quot; title=&quot;1.准备工作&quot;&gt;&lt;/a&gt;1.准备工作&lt;/h4&gt;&lt;h5 id=&quot;搭建配置好solr，新建一个core&quot;&gt;&lt;a href=&quot;#搭建配置好solr，新建一个core&quot; class=&quot;headerlink&quot; title=&quot;搭建配置好solr，新建一个core&quot;&gt;&lt;/a&gt;搭建配置好solr，新建一个core&lt;/h5&gt;&lt;h4 id=&quot;2-修改solrconfig-xml&quot;&gt;&lt;a href=&quot;#2-修改solrconfig-xml&quot; class=&quot;headerlink&quot; title=&quot;2.修改solrconfig.xml&quot;&gt;&lt;/a&gt;2.修改solrconfig.xml&lt;/h4&gt;&lt;h5 id=&quot;1-在的上面添加如下代码&quot;&gt;&lt;a href=&quot;#1-在的上面添加如下代码&quot; class=&quot;headerlink&quot; title=&quot;1.在的上面添加如下代码&quot;&gt;&lt;/a&gt;1.在&lt;requestHandler name=&quot;/select&quot; class=&quot;solr.SearchHandler&quot;&gt;的上面添加如下代码&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;requestHandler name&amp;#x3D;&amp;quot;&amp;#x2F;dataimport&amp;quot; class&amp;#x3D;&amp;quot;org.apache.solr.handler.dataimport.DataImportHandler&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　     &amp;lt;lst name&amp;#x3D;&amp;quot;defaults&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　        &amp;lt;str name&amp;#x3D;&amp;quot;config&amp;quot;&amp;gt;data-config.xml&amp;lt;&amp;#x2F;str&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　     &amp;lt;&amp;#x2F;lst&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　&amp;lt;&amp;#x2F;requestHandler&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;h5 id=&quot;1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot;&gt;&lt;a href=&quot;#1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot; class=&quot;headerlink&quot; title=&quot;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&quot;&gt;&lt;/a&gt;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&lt;/h5&gt;&lt;h5 id=&quot;2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot;&gt;&lt;a href=&quot;#2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot; class=&quot;headerlink&quot; title=&quot;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&quot;&gt;&lt;/a&gt;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;listener-class&amp;gt;org.apache.solr.handler.dataimport.scheduler.ApplicationListener&amp;lt;&amp;#x2F;listener-class&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;#x2F;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
