@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>曹大仙儿</title>
-  <icon>https://owlhy.com/icon.png</icon>
+  <icon>https://blog.owlhy.com/icon.png</icon>
   <subtitle>你回家吃饭吗W我晓得锤子，我只知道吃香蕉</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://owlhy.com/"/>
+  <link href="https://blog.owlhy.com/"/>
   <updated>2021-05-05T15:10:10.000Z</updated>
-  <id>https://owlhy.com/</id>
+  <id>https://blog.owlhy.com/</id>
   
   <author>
     <name>CAO.DA.XIAN</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>【いつだって 信じて 可能性 は無限大】</title>
-    <link href="https://owlhy.com/planB.html"/>
-    <id>https://owlhy.com/planB.html</id>
+    <link href="https://blog.owlhy.com/planB.html"/>
+    <id>https://blog.owlhy.com/planB.html</id>
     <published>2021-05-04T16:00:00.000Z</published>
     <updated>2021-05-05T15:10:10.000Z</updated>
     
@@ -30,19 +30,19 @@
     </summary>
     
     
-      <category term="cdx" scheme="https://owlhy.com/categories/cdx/"/>
+      <category term="cdx" scheme="https://blog.owlhy.com/categories/cdx/"/>
     
     
-      <category term="vlog" scheme="https://owlhy.com/tags/vlog/"/>
+      <category term="vlog" scheme="https://blog.owlhy.com/tags/vlog/"/>
     
-      <category term="cdx" scheme="https://owlhy.com/tags/cdx/"/>
+      <category term="cdx" scheme="https://blog.owlhy.com/tags/cdx/"/>
     
   </entry>
   
   <entry>
     <title>【JAVA补血大法】</title>
-    <link href="https://owlhy.com/java-day00.html"/>
-    <id>https://owlhy.com/java-day00.html</id>
+    <link href="https://blog.owlhy.com/java-day00.html"/>
+    <id>https://blog.owlhy.com/java-day00.html</id>
     <published>2020-06-25T04:21:12.000Z</published>
     <updated>2020-07-06T06:33:42.000Z</updated>
     
@@ -59,21 +59,21 @@
     </summary>
     
     
-      <category term="java" scheme="https://owlhy.com/categories/java/"/>
+      <category term="java" scheme="https://blog.owlhy.com/categories/java/"/>
     
     
-      <category term="java" scheme="https://owlhy.com/tags/java/"/>
+      <category term="java" scheme="https://blog.owlhy.com/tags/java/"/>
     
-      <category term="jvm" scheme="https://owlhy.com/tags/jvm/"/>
+      <category term="jvm" scheme="https://blog.owlhy.com/tags/jvm/"/>
     
-      <category term="spring" scheme="https://owlhy.com/tags/spring/"/>
+      <category term="spring" scheme="https://blog.owlhy.com/tags/spring/"/>
     
   </entry>
   
   <entry>
     <title>【SpringBoot中logback处理日志】</title>
-    <link href="https://owlhy.com/springboot-logback.html"/>
-    <id>https://owlhy.com/springboot-logback.html</id>
+    <link href="https://blog.owlhy.com/springboot-logback.html"/>
+    <id>https://blog.owlhy.com/springboot-logback.html</id>
     <published>2020-04-07T14:21:11.000Z</published>
     <updated>2020-05-15T03:46:23.000Z</updated>
     
@@ -89,21 +89,21 @@
     </summary>
     
     
-      <category term="java" scheme="https://owlhy.com/categories/java/"/>
+      <category term="java" scheme="https://blog.owlhy.com/categories/java/"/>
     
-      <category term="springboot" scheme="https://owlhy.com/categories/java/springboot/"/>
+      <category term="springboot" scheme="https://blog.owlhy.com/categories/java/springboot/"/>
     
     
-      <category term="springboot" scheme="https://owlhy.com/tags/springboot/"/>
+      <category term="springboot" scheme="https://blog.owlhy.com/tags/springboot/"/>
     
-      <category term="log" scheme="https://owlhy.com/tags/log/"/>
+      <category term="log" scheme="https://blog.owlhy.com/tags/log/"/>
     
   </entry>
   
   <entry>
     <title>【REDIS配置详解】</title>
-    <link href="https://owlhy.com/redis-config.html"/>
-    <id>https://owlhy.com/redis-config.html</id>
+    <link href="https://blog.owlhy.com/redis-config.html"/>
+    <id>https://blog.owlhy.com/redis-config.html</id>
     <published>2020-04-06T14:21:11.000Z</published>
     <updated>2020-05-19T06:56:45.000Z</updated>
     
@@ -117,19 +117,19 @@
     </summary>
     
     
-      <category term="redis" scheme="https://owlhy.com/categories/redis/"/>
+      <category term="redis" scheme="https://blog.owlhy.com/categories/redis/"/>
     
     
-      <category term="redis" scheme="https://owlhy.com/tags/redis/"/>
+      <category term="redis" scheme="https://blog.owlhy.com/tags/redis/"/>
     
-      <category term="config" scheme="https://owlhy.com/tags/config/"/>
+      <category term="config" scheme="https://blog.owlhy.com/tags/config/"/>
     
   </entry>
   
   <entry>
     <title>【Maven插件Assembly进行打包】</title>
-    <link href="https://owlhy.com/maven-assembly.html"/>
-    <id>https://owlhy.com/maven-assembly.html</id>
+    <link href="https://blog.owlhy.com/maven-assembly.html"/>
+    <id>https://blog.owlhy.com/maven-assembly.html</id>
     <published>2020-03-07T10:25:11.000Z</published>
     <updated>2020-05-19T07:04:37.000Z</updated>
     
@@ -144,21 +144,21 @@
     </summary>
     
     
-      <category term="java" scheme="https://owlhy.com/categories/java/"/>
+      <category term="java" scheme="https://blog.owlhy.com/categories/java/"/>
     
-      <category term="springboot" scheme="https://owlhy.com/categories/java/springboot/"/>
+      <category term="springboot" scheme="https://blog.owlhy.com/categories/java/springboot/"/>
     
     
-      <category term="springboot" scheme="https://owlhy.com/tags/springboot/"/>
+      <category term="springboot" scheme="https://blog.owlhy.com/tags/springboot/"/>
     
-      <category term="maven" scheme="https://owlhy.com/tags/maven/"/>
+      <category term="maven" scheme="https://blog.owlhy.com/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title>【LINUX日常命令】</title>
-    <link href="https://owlhy.com/linux-base.html"/>
-    <id>https://owlhy.com/linux-base.html</id>
+    <link href="https://blog.owlhy.com/linux-base.html"/>
+    <id>https://blog.owlhy.com/linux-base.html</id>
     <published>2019-09-06T04:21:12.000Z</published>
     <updated>2020-05-19T07:11:47.000Z</updated>
     
@@ -176,19 +176,19 @@
     </summary>
     
     
-      <category term="linux" scheme="https://owlhy.com/categories/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/categories/linux/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="shell" scheme="https://owlhy.com/tags/shell/"/>
+      <category term="shell" scheme="https://blog.owlhy.com/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>【Hadoop学习笔记 -- 完全分布式搭建】</title>
-    <link href="https://owlhy.com/hadoop-05.html"/>
-    <id>https://owlhy.com/hadoop-05.html</id>
+    <link href="https://blog.owlhy.com/hadoop-05.html"/>
+    <id>https://blog.owlhy.com/hadoop-05.html</id>
     <published>2018-11-28T16:00:00.000Z</published>
     <updated>2020-06-02T14:40:26.000Z</updated>
     
@@ -199,19 +199,19 @@
     </summary>
     
     
-      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/categories/hadoop/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/tags/hadoop/"/>
     
   </entry>
   
   <entry>
     <title>【Hadoop学习笔记 -- 修改本地临时文件存储目录】</title>
-    <link href="https://owlhy.com/hadoop-04.html"/>
-    <id>https://owlhy.com/hadoop-04.html</id>
+    <link href="https://blog.owlhy.com/hadoop-04.html"/>
+    <id>https://blog.owlhy.com/hadoop-04.html</id>
     <published>2018-11-26T04:00:12.000Z</published>
     <updated>2020-06-02T14:36:07.000Z</updated>
     
@@ -222,19 +222,19 @@
     </summary>
     
     
-      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/categories/hadoop/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/tags/hadoop/"/>
     
   </entry>
   
   <entry>
     <title>【Solr入门--搭建Solr过程中遇到的问题汇总】</title>
-    <link href="https://owlhy.com/solr-06.html"/>
-    <id>https://owlhy.com/solr-06.html</id>
+    <link href="https://blog.owlhy.com/solr-06.html"/>
+    <id>https://blog.owlhy.com/solr-06.html</id>
     <published>2018-11-21T16:00:00.000Z</published>
     <updated>2020-06-02T15:01:10.000Z</updated>
     
@@ -245,19 +245,19 @@
     </summary>
     
     
-      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/categories/solr/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/tags/solr/"/>
     
   </entry>
   
   <entry>
     <title>【Solr入门--复制域的详细配置】</title>
-    <link href="https://owlhy.com/solr-05.html"/>
-    <id>https://owlhy.com/solr-05.html</id>
+    <link href="https://blog.owlhy.com/solr-05.html"/>
+    <id>https://blog.owlhy.com/solr-05.html</id>
     <published>2018-11-20T16:00:00.000Z</published>
     <updated>2020-06-02T15:01:05.000Z</updated>
     
@@ -269,42 +269,19 @@
     </summary>
     
     
-      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/categories/solr/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Solr入门--定时导入数据】</title>
-    <link href="https://owlhy.com/solr-04.html"/>
-    <id>https://owlhy.com/solr-04.html</id>
-    <published>2018-11-19T16:00:00.000Z</published>
-    <updated>2020-06-02T15:01:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot;&gt;&lt;a href=&quot;#1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot; class=&quot;headerlink&quot; title=&quot;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&quot;&gt;&lt;/a&gt;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&lt;/h5&gt;&lt;h5 id=&quot;2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot;&gt;&lt;a href=&quot;#2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot; class=&quot;headerlink&quot; title=&quot;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&quot;&gt;&lt;/a&gt;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;listener-class&amp;gt;org.apache.solr.handler.dataimport.scheduler.ApplicationListener&amp;lt;&amp;#x2F;listener-class&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;#x2F;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
-    
-    
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
-    
-      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/tags/solr/"/>
     
   </entry>
   
   <entry>
     <title>【Solr入门--导入数据（基于内置Jetty）】</title>
-    <link href="https://owlhy.com/solr-03.html"/>
-    <id>https://owlhy.com/solr-03.html</id>
+    <link href="https://blog.owlhy.com/solr-03.html"/>
+    <id>https://blog.owlhy.com/solr-03.html</id>
     <published>2018-11-19T16:00:00.000Z</published>
     <updated>2020-06-02T15:00:53.000Z</updated>
     
@@ -315,19 +292,42 @@
     </summary>
     
     
-      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/categories/solr/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/tags/solr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Solr入门--定时导入数据】</title>
+    <link href="https://blog.owlhy.com/solr-04.html"/>
+    <id>https://blog.owlhy.com/solr-04.html</id>
+    <published>2018-11-19T16:00:00.000Z</published>
+    <updated>2020-06-02T15:01:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot;&gt;&lt;a href=&quot;#1-将-apache-solr-dataimportscheduler-jar-和solr自带的-apache-solr-dataimporthandler-jar-apache-solr-dataimporthandler-extras-jar-放到solr-war的lib目录下面&quot; class=&quot;headerlink&quot; title=&quot;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&quot;&gt;&lt;/a&gt;1. 将 apache-solr-dataimportscheduler-.jar 和solr自带的 apache-solr-dataimporthandler-.jar, apache-solr-dataimporthandler-extras-.jar 放到solr.war的lib目录下面&lt;/h5&gt;&lt;h5 id=&quot;2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot;&gt;&lt;a href=&quot;#2-修改solr-war中WEB-INF-web-xml-在servlet节点前面增加，注意后面不要有空格&quot; class=&quot;headerlink&quot; title=&quot;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&quot;&gt;&lt;/a&gt;2.修改solr.war中WEB-INF/web.xml, 在servlet节点前面增加，注意后面不要有空格:&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;listener-class&amp;gt;org.apache.solr.handler.dataimport.scheduler.ApplicationListener&amp;lt;&amp;#x2F;listener-class&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;#x2F;listener&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="solr" scheme="https://blog.owlhy.com/categories/solr/"/>
+    
+    
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
+    
+      <category term="solr" scheme="https://blog.owlhy.com/tags/solr/"/>
     
   </entry>
   
   <entry>
     <title>【Solr入门--基于内置Jetty搭建solr服务】</title>
-    <link href="https://owlhy.com/solr-02.html"/>
-    <id>https://owlhy.com/solr-02.html</id>
+    <link href="https://blog.owlhy.com/solr-02.html"/>
+    <id>https://blog.owlhy.com/solr-02.html</id>
     <published>2018-11-18T16:00:00.000Z</published>
     <updated>2020-06-02T15:00:48.000Z</updated>
     
@@ -340,19 +340,19 @@
     </summary>
     
     
-      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/categories/solr/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/tags/solr/"/>
     
   </entry>
   
   <entry>
     <title>【Solr入门--基于Tomcat搭建solr服务】</title>
-    <link href="https://owlhy.com/solr-01.html"/>
-    <id>https://owlhy.com/solr-01.html</id>
+    <link href="https://blog.owlhy.com/solr-01.html"/>
+    <id>https://blog.owlhy.com/solr-01.html</id>
     <published>2018-11-17T16:00:00.000Z</published>
     <updated>2020-06-02T15:00:43.000Z</updated>
     
@@ -368,19 +368,19 @@
     </summary>
     
     
-      <category term="solr" scheme="https://owlhy.com/categories/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/categories/solr/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="solr" scheme="https://owlhy.com/tags/solr/"/>
+      <category term="solr" scheme="https://blog.owlhy.com/tags/solr/"/>
     
   </entry>
   
   <entry>
     <title>【Hadoop学习笔记 -- 在Yarn上运行MapReduce程序】</title>
-    <link href="https://owlhy.com/hadoop-03.html"/>
-    <id>https://owlhy.com/hadoop-03.html</id>
+    <link href="https://blog.owlhy.com/hadoop-03.html"/>
+    <id>https://blog.owlhy.com/hadoop-03.html</id>
     <published>2018-11-17T04:21:12.000Z</published>
     <updated>2020-06-02T14:33:17.000Z</updated>
     
@@ -391,19 +391,19 @@
     </summary>
     
     
-      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/categories/hadoop/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/tags/hadoop/"/>
     
   </entry>
   
   <entry>
     <title>【Hadoop学习笔记 -- 在HDFS上运行MapReduce程序】</title>
-    <link href="https://owlhy.com/hadoop-02.html"/>
-    <id>https://owlhy.com/hadoop-02.html</id>
+    <link href="https://blog.owlhy.com/hadoop-02.html"/>
+    <id>https://blog.owlhy.com/hadoop-02.html</id>
     <published>2018-11-16T04:21:12.000Z</published>
     <updated>2020-06-02T14:33:12.000Z</updated>
     
@@ -414,19 +414,19 @@
     </summary>
     
     
-      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/categories/hadoop/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/tags/hadoop/"/>
     
   </entry>
   
   <entry>
     <title>【Hadoop学习笔记 -- 搭建Hadoop环境】</title>
-    <link href="https://owlhy.com/hadoop-01.html"/>
-    <id>https://owlhy.com/hadoop-01.html</id>
+    <link href="https://blog.owlhy.com/hadoop-01.html"/>
+    <id>https://blog.owlhy.com/hadoop-01.html</id>
     <published>2018-11-15T04:21:12.000Z</published>
     <updated>2020-06-02T14:31:38.000Z</updated>
     
@@ -456,19 +456,19 @@
     </summary>
     
     
-      <category term="hadoop" scheme="https://owlhy.com/categories/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/categories/hadoop/"/>
     
     
-      <category term="linux" scheme="https://owlhy.com/tags/linux/"/>
+      <category term="linux" scheme="https://blog.owlhy.com/tags/linux/"/>
     
-      <category term="hadoop" scheme="https://owlhy.com/tags/hadoop/"/>
+      <category term="hadoop" scheme="https://blog.owlhy.com/tags/hadoop/"/>
     
   </entry>
   
   <entry>
     <title>【MySql-远程访问】</title>
-    <link href="https://owlhy.com/mysql-remote.html"/>
-    <id>https://owlhy.com/mysql-remote.html</id>
+    <link href="https://blog.owlhy.com/mysql-remote.html"/>
+    <id>https://blog.owlhy.com/mysql-remote.html</id>
     <published>2018-08-11T16:00:00.000Z</published>
     <updated>2020-06-02T15:19:34.000Z</updated>
     
@@ -485,12 +485,12 @@
     </summary>
     
     
-      <category term="mysql" scheme="https://owlhy.com/categories/mysql/"/>
+      <category term="mysql" scheme="https://blog.owlhy.com/categories/mysql/"/>
     
     
-      <category term="database" scheme="https://owlhy.com/tags/database/"/>
+      <category term="database" scheme="https://blog.owlhy.com/tags/database/"/>
     
-      <category term="mysql" scheme="https://owlhy.com/tags/mysql/"/>
+      <category term="mysql" scheme="https://blog.owlhy.com/tags/mysql/"/>
     
   </entry>
   
